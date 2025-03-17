@@ -59,13 +59,13 @@ El proyecto consta de los siguientes archivos principales:
 
 ## 🖼️ Capturas de pantalla
 
-![Página principal](#)  
+![Página principal](capturas/index.jpg)  
 *Página principal con el formulario de inicio de sesión y registro.*
 
-![Mapa interactivo](#)  
+![Mapa interactivo](capturas/mapa.jpg)  
 *Mapa interactivo con filtros de búsqueda y opción para reportar mascotas.*
 
-![Formulario de reporte](#)  
+![Formulario de reporte](capturas/repor.jpg)  
 *Formulario para reportar una mascota encontrada.*
 
 ---
