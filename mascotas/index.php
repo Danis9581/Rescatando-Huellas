@@ -1,3 +1,5 @@
+//Página inicial donde el usuario podrá acceder a la pàgina, registrarse o restablecer contraseña.
+//Regular rutas.
 <?php
 $url = isset($_GET['url']) ? $_GET['url'] : '';
 
