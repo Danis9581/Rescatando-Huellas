@@ -1,0 +1,816 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url('../img/header.jpg') no-repeat top center/cover;
+}
+
+/* .container {
+    width: 90%; 
+    max-width: 1200px;
+    margin: 50px auto 0 auto;
+    background: rgba(255, 255, 255, 0.726); 
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden; 
+} */
+
+#h2Mapa {
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin: 40px auto 10px auto;
+}
+
+#pMapa {
+    font-size: 1.3rem;
+    position: absolute; 
+    top: 10px;
+    left: 20px;
+    margin: 0;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+#pMapa a {
+    color: #3498db; 
+    text-decoration: none;
+    border-bottom: 1px solid #3498db;
+    transition: color 0.3s ease;
+}
+
+#pMapa a:hover {
+    color: #2980b9;
+}
+
+#cuentaRegresiva {
+    font-size: 1.3rem;
+    position: absolute; 
+    top: 10px;
+    right: 20px;
+    margin: 0;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Estilos para los filtros */
+#filtros {
+    box-sizing: border-box;
+    width: 100%; 
+    padding: 20px;
+    text-align: center;
+    background: #f0f0f0; 
+    border-bottom: 1px solid #ddd; 
+}
+
+#filtros .filtro-fila {
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+#filtros label {
+    margin: 0 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+#filtros select {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px;
+    transition: border-color 0.3s ease;
+}
+
+#filtros select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+#filtros #raza {
+    width: 200px;
+}
+
+/* Estilos para el mapa */
+#map {
+    height: 380px; 
+    width: 100%; 
+    border-bottom: 3px solid rgba(188, 246, 253, 0.61);
+    border-top: 3px solid rgba(188, 246, 253, 0.61);
+}
+
+.leaflet-marker-icon,
+.leaflet-marker-shadow {
+    display: none !important;
+}
+
+#contButton {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background: #f0f0f0; /* Un fondo más claro */
+}
+
+#contButton p {
+    margin-right: 20px;
+    border-bottom: 1px solid #333;
+    font-size: 1.3rem;
+}
+
+/* Estilos para el formulario de reporte */
+#btnReportar {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#btnReportar:hover {
+    background-color: #2980b9;
+}
+
+#formReporte {
+    display: none;
+    background: rgba(255, 255, 255, 0.726);
+    border-radius: 10px;
+    border: 3px solid rgba(188, 246, 253, 0.61);
+    padding: 20px;
+    margin: 60px auto 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%; 
+    max-height: 70vh; 
+    overflow-y: auto; 
+}
+
+#formReporte h3 {
+    color: #000000;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); */
+}
+
+#formReporte label {
+    font-size: 14px; 
+    margin-top: 8px; 
+    display: block;
+}
+
+#formReporte input,
+#formReporte select,
+#formReporte textarea {
+    width: calc(100% - 22px); 
+    padding: 8px; 
+    margin-top: 3px;
+    margin-bottom: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    box-sizing: border-box;
+    font-size: 14px; 
+}
+
+#formReporte textarea {
+    min-height: 80px;
+}
+
+#butonsflex {
+    margin-right: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#formReporte .buttonVerde {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#formReporte .buttonVerde:hover {
+    background-color: #0056b3;
+}
+
+#formReporte .buttonVerde i {
+    font-size: 20px;
+}
+
+#formReporte #buttonGrande{ 
+    padding: 20px 45px; 
+    background-color: #0011ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+
+#formReporte #buttonGrande:hover {
+    background-color: #32fd5e;
+    color: white;
+}
+
+/* Estilos para el modal Reporte*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.726);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-content button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.modal-content button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para los mensajes de error */
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: block;
+    margin-top: -8px; 
+    margin-bottom: 5px;
+}
+
+/* Estilos para el formulario de registro */
+#registro-form {
+    background: rgba(188, 246, 253, 0.61);
+    border: 1px solid #ced4da;
+    padding: 30px;
+    margin: 50px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 500px;
+}
+
+#registro-form h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+#registro-form label {
+    margin-bottom: 5px;
+}
+
+#registro-form input[type="text"],
+#registro-form input[type="email"],
+#registro-form input[type="password"] {
+    width: 100%;
+    padding: 10px 35px 10px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+#registro-form input[type="text"]:focus,
+#registro-form input[type="email"]:focus,
+#registro-form input[type="password"]:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.botones-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.botones-container button:hover {
+    background-color: #0069d9;
+}
+
+.botones-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+
+#volver-login {
+    width: 150px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+volver-login :hover {
+    background-color: #0056b3;
+}
+
+
+.error-message {
+    color: #dc3545; 
+    margin: 5px;
+    font-size: 14px;
+}
+
+/* Estilos para inputs con error */
+input.error {
+    border-color: #dc3545;
+}
+
+/*Modal registro exitoso */
+#registro-exitoso {
+    display: none;
+    background: rgba(188, 246, 253, 0.85);
+    padding: 20px 30px;
+    border-radius: 12px;
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#registro-exitoso .infoReporte h4 {
+    color: #0b7285;
+    font-size: 1.6rem;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+#registro-exitoso .infoReporte p {
+    color: #0b3d51;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.infoReporte {
+    padding-bottom: 30px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#registro-exitoso h3 {
+    color: #0b7285;
+    margin: 0 0 20px 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.modal-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    gap: 20px;
+}
+
+.seccion {
+    width: 48%;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.seccion:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.seccion h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #0b7285;
+}
+
+.seccion p {
+    font-size: 1rem;
+    color: #0b3d51;
+}
+
+.seccion img {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+#continuar {
+    width: 80%;
+    margin: 30px auto 10px auto;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#continuar:hover {
+    background-color: #0056b3;
+}
+
+/*Estilos para el index.php*/
+#bodyIndex {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('../img/header.jpg') no-repeat top center/cover;
+}
+
+/* Contenedor del título */
+.hero {
+    position: absolute;
+    top: 10%;
+    text-align: center;
+    color: white;
+    width: 100%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+}
+
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* Formulario de inicio de sesión */
+.login-container {
+    position: absolute;
+    top: 58%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(188, 246, 253, 0.61);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+}
+
+
+.login-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.login-container input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin:10px 0 30px 0;
+}
+
+.login-container button:hover {
+    background-color: #0056b3;
+}
+
+.login-container p {
+    margin-top: 15px;
+}
+
+.login-container a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+/*Estilos para el icono mostrar/ocultar contraseñas*/
+.password-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    width: 100%; 
+    padding-right: 35px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 35%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+}
+
+/* .toggle-passwordR {
+    position: absolute;
+    right: 30px;
+    top: 35%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+} */
+
+/* Estilos mensaje confirmacion recuperacion cuenta*/
+#mensaje-confirmacion {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#cerrar-mensaje {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*Estilo para la p del mensaje contraseña actualizada..*/
+#mensaje-texto{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/*Estilo del modal token_expirado.php*/
+.modalToken {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/********************************* Media query para dispositivos con un ancho máximo de 768px ************************************/
+@media (max-width: 768px) {
+    body {
+        background-size: auto;
+    }
+
+    /* Ajustes para el título del mapa */
+    #h2Mapa {
+        font-size: 2rem; 
+        margin: 50px auto 30px auto;
+    }
+
+    /* Ajustes para el párrafo del mapa */
+    #pMapa {
+        font-size: 0.6rem;
+    }
+
+    /* Ajustes para la cuenta regresiva */
+    #cuentaRegresiva {
+        font-size: 0.5rem;
+    }
+
+    #filtros {
+        padding: 10px; 
+        width: 100%;
+        display: flex;
+        flex-direction: column; 
+        gap: 8px;
+    }
+
+    /* Cada fila de label + select */
+    #filtros .filtro-fila {
+        display: flex;
+        align-items: center; 
+        justify-content: space-between; 
+    }
+
+    /* Estilos para los labels */
+    #filtros label {
+        margin: 0; 
+        font-size: 0.9rem; 
+        color: #333;
+        flex: 0 0 30%; 
+        text-align: left; 
+    }
+
+    /* Estilos para los selects */
+    #filtros select {
+        padding: 6px 10px; 
+        font-size: 0.9rem; 
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 0; 
+        width: 65%; 
+        max-width: none; 
+        height: 36px; 
+    }
+
+    /* Estilo específico para el select de raza */
+    #filtros #raza {
+        width: 65%; 
+    }
+
+    /* Ajustes para el mapa */
+    #map {
+        height: 400px; 
+    }
+
+    /* Ajustes para el contenedor de botones */
+    #contButton {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    #contButton p {
+        margin: 10px 0; 
+        font-size: 0.7rem
+    }
+
+    /* Ajustes para el formulario de reporte */
+    #formReporte {
+        width: 80%; 
+        margin: 50px auto 0 auto;
+        
+    }
+
+    #formReporte h3 {
+        font-size: 1.5rem; 
+    }
+
+    #formReporte input,
+    #formReporte select,
+    #formReporte textarea {
+        width: 100%; 
+    }
+
+    #butonsflex {
+        display: flex; 
+        justify-content: space-between; 
+        margin: 0;
+    }
+
+    /* Ajustes para el modal de reporte */
+    .modal-content {
+        width: 70%; 
+    }
+
+    /* Ajustes para el formulario de registro */
+    #registro-form {
+        width: 70%; 
+        margin: 60px auto; 
+    }
+
+    #registro-form h2 {
+        font-size: 1.5rem; 
+    }
+
+    /* Ajustes para el login container */
+    .login-container {
+        width: 70%; 
+        top: 55%; 
+    }
+
+    .login-container h2 {
+        font-size: 1.5rem; 
+    }
+
+    /* Ajustes para el hero */
+    .hero h1 {
+        font-size: 2rem; 
+    }
+
+    .hero p {
+        font-size: 1rem; 
+        padding: 0 30px;
+    }
+
+    /* Ajustes para el modal de registro exitoso */
+    .infoReporte {
+        padding-bottom: 0;
+    }
+    .infoReporte h4{
+        margin-top: 0;
+        font-size: 1.3rem;
+    }
+    
+    .infoReporte p {
+        margin: 5px 0 0 0;
+    }
+
+     #registro-exitoso h3 {
+        font-size: 2rem; 
+    }
+
+    .seccion h4 {
+        margin-top: 0;
+    }
+
+    .seccion p {
+        margin: 0;
+    }
+    
+    #continuar {
+        margin: 15px auto 0 auto;
+    }
+}
+
+
