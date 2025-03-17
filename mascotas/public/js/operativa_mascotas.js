@@ -1,3 +1,4 @@
+//Operativa general de la página mapa.php
 // Lista de razas disponibles por especie
 var razasDisponibles = {
     "perro": ["Labrador", "Beagle", "Bulldog", "Pastor Alemán", "Poodle", "Golden Retriever", "Dachshund", "Chihuahua", "Boxer", "Rottweiler", "Cocker Spaniel", "Shih Tzu", "Doberman", "Schnauzer", "Basset Hound"],
