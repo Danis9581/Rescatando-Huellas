@@ -6,13 +6,16 @@ Este proyecto es una plataforma web diseñada para ayudar a las personas a repor
 
 ## 🚀 Funcionalidades principales
 
+## 🚀 Funcionalidades principales
+
 - **Registro de usuarios**: Permite a los usuarios registrarse para acceder a la plataforma.
 - **Inicio de sesión**: Los usuarios pueden iniciar sesión para acceder a las funcionalidades del sitio.
 - **Mapa interactivo**: Muestra las ubicaciones de las mascotas reportadas.
 - **Filtros de búsqueda**: Permite buscar mascotas por especie, raza y color.
 - **Reportar mascotas**: Permite a los usuarios reportar mascotas encontradas, incluyendo detalles como nombre, raza, color, descripción, imagen y ubicación.
 - **Contacto**: Los usuarios pueden contactar a quien reportó una mascota para recuperarla.
-- **Cuenta regresiva**: Los reportes de mascotas tienen una cuenta regresiva de 5 minutos antes de caducar.
+- **Cuenta regresiva**: Los reportes de mascotas tienen una cuenta regresiva de 60 días antes de caducar. Actualmente, está configurada en 5 minutos para facilitar las pruebas.
+- **Recuperar contraseña**: La funcionalidad de recuperación de contraseña está actualmente desactivada debido a las limitaciones del hosting gratuito. Estoy trabajando en su implementación para que esté disponible en breve.
 
 ---
 
