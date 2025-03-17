@@ -1,4 +1,4 @@
-// Espera a que el DOM esté completamente cargado antes de ejecutar el script
+// Operativa encargada del login
 document.addEventListener("DOMContentLoaded", function () {
     const loginForm = document.getElementById("login-form");
 
