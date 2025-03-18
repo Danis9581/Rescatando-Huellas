@@ -6,8 +6,6 @@ Este proyecto es una plataforma web diseñada para ayudar a las personas a repor
 
 ## 🚀 Funcionalidades principales
 
-## 🚀 Funcionalidades principales
-
 - **Registro de usuarios**: Permite a los usuarios registrarse para acceder a la plataforma.
 - **Inicio de sesión**: Los usuarios pueden iniciar sesión para acceder a las funcionalidades del sitio.
 - **Mapa interactivo**: Muestra las ubicaciones de las mascotas reportadas.
@@ -69,7 +67,7 @@ El proyecto consta de los siguientes archivos principales:
 *Mapa interactivo con filtros de búsqueda y opción para reportar mascotas.*
 
 ![Formulario de reporte](capturas/repor.jpg)  
-*Formulario para reportar una mascota encontrada.*
+*Formulario para reportar una mascota perdida.*
 
 ---
 
