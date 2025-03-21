@@ -1,4 +1,4 @@
-# Mascotas Perdidas - Plataforma para reportar y encontrar mascotas
+# Rescatando Huellas - Plataforma para reportar y encontrar mascotas
 
 Este proyecto es una plataforma web diseñada para ayudar a las personas a reportar mascotas perdidas y encontrar aquellas que han sido reportadas por otros usuarios. Incluye un mapa interactivo, filtros de búsqueda y un sistema de reportes.
 
