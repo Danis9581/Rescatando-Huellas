@@ -1,77 +1,57 @@
-# Rescatando Huellas - Plataforma para reportar y encontrar mascotas
+# 🐾 Rescatando Huellas - Plataforma para Reportar y Encontrar Mascotas
 
-Este proyecto es una plataforma web diseñada para ayudar a las personas a reportar mascotas perdidas y encontrar aquellas que han sido reportadas por otros usuarios. Incluye un mapa interactivo, filtros de búsqueda y un sistema de reportes.
+[![Deployment](https://img.shields.io/badge/Deployed_on-000000?style=flat&logo=apache)](http://www.mascotasperdidas.fwh.is)
+[![PHP](https://img.shields.io/badge/PHP-8.1-777BB4?logo=php)](https://www.php.net/)
+[![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?logo=mysql)](https://www.mysql.com/)
+[![Leaflet](https://img.shields.io/badge/Leaflet-1.9-199900?logo=leaflet)](https://leafletjs.com/)
+[![License](https://img.shields.io/badge/License-MIT-green)](https://opensource.org/licenses/MIT)
 
----
+**Plataforma web comunitaria para reportar mascotas perdidas y ayudar a reunirlas con sus dueños.** Incluye mapa interactivo, sistema de reportes con fotos y temporizador de 60 días (5 minutos en modo prueba).
 
-## 🚀 Funcionalidades principales
+*"Porque cada huella cuenta y ningún amigo peludo debería perderse para siempre."*
 
-- **Registro de usuarios**: Permite a los usuarios registrarse para acceder a la plataforma.
-- **Inicio de sesión**: Los usuarios pueden iniciar sesión para acceder a las funcionalidades del sitio.
-- **Mapa interactivo**: Muestra las ubicaciones de las mascotas reportadas.
-- **Filtros de búsqueda**: Permite buscar mascotas por especie, raza y color.
-- **Reportar mascotas**: Permite a los usuarios reportar mascotas encontradas, incluyendo detalles como nombre, raza, color, descripción, imagen y ubicación.
-- **Contacto**: Los usuarios pueden contactar a quien reportó una mascota para recuperarla.
-- **Cuenta regresiva**: Los reportes de mascotas tienen una cuenta regresiva de 60 días antes de caducar. Actualmente, está configurada en 5 minutos para facilitar las pruebas.
-- **Recuperar contraseña**: La funcionalidad de recuperación de contraseña está actualmente desactivada debido a las limitaciones del hosting gratuito. Estoy trabajando en su implementación para que esté disponible en breve.
+## 🌟 Demo en Vivo
+👉 [http://www.mascotasperdidas.fwh.is](http://www.mascotasperdidas.fwh.is)
 
----
+## ✨ Funcionalidades Principales
+- **🗺️ Mapa Interactivo**: Visualización geolocalizada de mascotas reportadas.
+- **🔍 Búsqueda Inteligente**: Filtros por especie, raza y color.
+- **⏳ Temporizador Visible**: Reportes con cuenta regresiva (60 días reales / 5 mins en pruebas).
+- **📸 Reportes Multimedia**: Subida de fotos + descripción detallada.
+- **🔐 Autenticación Segura**: Registro/login de usuarios (recuperación de contraseña en desarrollo).
+- **📱 Responsive Design**: Adaptable a móviles y tablets.
 
-## 🛠️ Tecnologías utilizadas
+## 🛠️ Stack Tecnológico
+| Tecnología       | Función en el Proyecto               |
+|------------------|-------------------------------------|
+| **PHP 8.1**      | Lógica del servidor y autenticación.|
+| **MySQL**        | Base de datos relacional.           |
+| **LeafletJS**    | Mapas interactivos + geolocalización.|
+| **JavaScript**   | Dinamismo frontend y llamadas API.  |
+| **HTML5/CSS3**   | Estructura y diseño responsive.     |
+| **Apache**       | Servidor web de despliegue.         |
 
-- **Frontend**: HTML, CSS, JavaScript.
-- **Backend**: PHP.
-- **Base de datos**: MySQL.
-- **Mapas**: [Leaflet](https://leafletjs.com/) para el mapa interactivo.
-- **API de geolocalización**: Para obtener la ubicación del usuario.
+## 🖼️ Capturas de Pantalla
 
----
+![Login](capturas/index.jpg)  
+*Página de inicio con formulario de acceso.*
 
-## 📂 Estructura del proyecto
+![Mapa](capturas/mapa.jpg)  
+*Interfaz principal con mapa y controles de búsqueda.*
 
-El proyecto consta de los siguientes archivos principales:
+![Reporte](capturas/repor.jpg)  
+*Formulario para registrar mascotas perdidas.*
 
-### **Carpeta `public`**
-- **`css/styles.css`**: Estilos CSS para la interfaz de usuario.
-- **`js/operativa_login.js`**: Lógica para manejar el inicio de sesión.
-- **`js/operativa_mascotas.js`**: Lógica para manejar el mapa interactivo y los reportes de mascotas.
-- **`js/operativa_recuperar.js`**: Lógica para manejar la recuperación de contraseña.
-- **`js/operativa_registro.js`**: Lógica para manejar el registro de usuarios.
-
-### **Carpeta `src/controllers`**
-- **`actualizar_contrasena.php`**: Lógica para actualizar la contraseña del usuario.
-- **`add_mascota.php`**: Lógica para agregar una mascota reportada.
-- **`eliminar_mascota.php`**: Lógica para eliminar un reporte de mascota.
-- **`get_mascotas.php`**: Lógica para obtener las mascotas reportadas.
-- **`login.php`**: Lógica para manejar el inicio de sesión.
-- **`logout.php`**: Lógica para cerrar la sesión del usuario.
-- **`recuperar_contrasena.php`**: Lógica para manejar la recuperación de contraseña.
-- **`registrar.php`**: Lógica para manejar el registro de usuarios.
-
-### **Carpeta `src/views`**
-- **`mapa.php`**: Página principal con el mapa interactivo y los filtros de búsqueda.
-- **`recuperar_contrasena_form.php`**: Formulario para recuperar la contraseña.
-- **`registro.php`**: Formulario de registro de usuarios.
-- **`restablecer_contrasena.php`**: Formulario para restablecer la contraseña.
-- **`token_expirado.php`**: Página que muestra un mensaje cuando el token de recuperación ha expirado.
-- **`index.php`**: Página de inicio con el formulario de inicio de sesión.
-
----
-
-## 🖼️ Capturas de pantalla
-
-![Página principal](capturas/index.jpg)  
-*Página principal con el formulario de inicio de sesión y registro.*
-
-![Mapa interactivo](capturas/mapa.jpg)  
-*Mapa interactivo con filtros de búsqueda y opción para reportar mascotas.*
-
-![Formulario de reporte](capturas/repor.jpg)  
-*Formulario para reportar una mascota perdida.*
-
----
-
-## 🌐 Enlace al proyecto
-
-Puedes probar la plataforma en el siguiente enlace: [www.mascotasperdidas.fwh.is](http://www.mascotasperdidas.fwh.is)
-
+## 📂 Estructura del Código
+```bash
+├── public/
+│   ├── css/styles.css            # Estilos principales
+│   ├── js/operativa_*.js         # Lógica frontend (login, mascotas, etc.)
+├── src/
+│   ├── controllers/              # Backend PHP
+│   │   ├── add_mascota.php       # Creación de reportes
+│   │   ├── get_mascotas.php      # API de consulta
+│   │   └── (otros endpoints)
+│   └── views/                    # Plantillas HTML/PHP
+│       ├── mapa.php              # Vista principal
+│       └── (otros formularios)
