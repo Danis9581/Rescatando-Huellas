@@ -1,6 +1,6 @@
 # 🐾 Rescatando Huellas - Plataforma para Reportar y Encontrar Mascotas
 
-[![Deployment](https://img.shields.io/badge/infinityfree_on-000000?style=flat&logo=apache)](http://www.mascotasperdidas.fwh.is)
+[![Deployment](https://img.shields.io/badge/oninfinityfree-000000?style=flat&logo=apache)](http://www.mascotasperdidas.fwh.is)
 [![PHP](https://img.shields.io/badge/PHP-8.1-777BB4?logo=php)](https://www.php.net/)
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?logo=mysql)](https://www.mysql.com/)
 [![Leaflet](https://img.shields.io/badge/Leaflet-1.9-199900?logo=leaflet)](https://leafletjs.com/)
